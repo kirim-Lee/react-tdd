@@ -9,7 +9,7 @@
     "esModuleInterop": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "react-jsx",
-    "types": ["node", "jest"],
+    "types": ["node", "@types/jest"],
     "typeRoots": ["./src/@types"]
   },
   "include": ["./src/**/*", "src/@types/*.d.ts"],
