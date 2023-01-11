@@ -1,0 +1,16 @@
+body {
+  margin:0; 
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.App {
+  padding:20px;
+  text-align: center;
+  img {width:150px;}
+  code {font-family: 'Sofia', Arial, Helvetica, sans-serif;}
+  a {color:green; text-decoration: none;
+    &:hover {
+      background-color: bisque;
+    }
+  }
+}
