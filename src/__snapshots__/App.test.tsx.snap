@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> 렌더링이 잘 되는지 테스트 1`] = `
+<div>
+  <div
+    class="sc-bcXHqe iAIzKk"
+  >
+    <div
+      class="sc-hLBbgP kjVjWS"
+    >
+      <div
+        class="sc-dkrFOg dltswW"
+        data-testid="toDoList"
+      />
+      <div
+        class="sc-gswNZR gVBGiX"
+      >
+        <input
+          class="sc-ftTHYK cvWhho"
+          placeholder="할 일을 입력해 주세요"
+          value=""
+        />
+        <button
+          class="sc-gKPRtg iHulel"
+        >
+          <div
+            class="sc-iBYQkv fXQImq"
+          >
+            추가
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
