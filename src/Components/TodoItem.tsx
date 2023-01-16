@@ -13,6 +13,7 @@ const Label = styled.div`
   flex: 1;
   font-size: 16px;
   margin-right: 20px;
+  text-align: left;
 `;
 
 interface IProps {

@@ -12,13 +12,16 @@ const InputBox = styled.input`
 
 interface IProps {
   readonly placeholder?: string;
+  readonly value?: string;
   readonly onChange?: (text: string) => void;
 }
 
-export const Input = ({ placeholder, onChange }: IProps) => {
+export const Input = ({ placeholder, value, onChange }: IProps) => {
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     onChange?.(evt.target.value);
   };
 
-  return <InputBox placeholder={placeholder} onChange={handleChange} />;
+  return (
+    <InputBox placeholder={placeholder} value={value} onChange={handleChange} />
+  );
 };
