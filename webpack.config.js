@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
+const publicPath = path.resolve(__dirname, 'public');
 
 const stylesHandler = isProduction
   ? MiniCssExtractPlugin.loader
@@ -20,24 +21,22 @@ const config = {
   devServer: {
     open: true,
     host: 'localhost',
+    static: {
+      directory: publicPath,
+      publicPath,
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html',
-      templateParameters: { PUBLIC_SRC: path.resolve(__dirname, 'public') },
+      templateParameters: { PUBLIC_SRC: publicPath }, // HTML 에서 지정된 변수를 <%=PUBLIC_SRC%> 형태로 사용할 수 있게 해준다.
     }),
     new InterpolateHtmlPlugin({
-      PUBLIC_URL: path.resolve(__dirname, 'public'),
+      PUBLIC_URL: publicPath, // HTML 에서 지정된 변수를 %PUBLIC_URL% 형태로 사용할 수 있게 해준다.
     }),
-
-    // Add your plugins here
-    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
     new webpack.EnvironmentPlugin({
-      PUBLIC_SRC: path.resolve(__dirname, 'public'),
+      PUBLIC_SRC: publicPath, // process.env.PUBLIC_SRC 형태로 환경변수를 사용 할 수 있게 해준다.
     }),
-    // new webpack.DefinePlugin({
-    //   'process.env.PUBLIC_SRC': path.resolve(__dirname, 'public'),
-    // }),
   ],
   module: {
     rules: [

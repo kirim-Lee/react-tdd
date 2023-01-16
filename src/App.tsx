@@ -1,4 +1,4 @@
-import '../public/scss/style.scss';
+// import '../public/scss/style.scss';
 const logo = new URL('../public/images/logo.jpeg', import.meta.url);
 
 const App = () => {
