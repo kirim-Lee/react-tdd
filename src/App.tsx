@@ -1,25 +1,25 @@
 import '../public/scss/style.scss';
-const logo = new URL('../public/images/logo.jpeg', import.meta.url);
+import {
+  Container,
+  Contents,
+  Button,
+  InputContainer,
+  Input,
+  TodoItem,
+} from './Components';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo.href} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <Container>
+      <Contents>
+        <TodoItem label="추가된 할일" onDelete={null} />
 
-        <a
-          className="app-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <InputContainer>
+          <Input placeholder="할 일을 입력해 주세요" />
+          <Button label="추가" backgroundColor="#86efac" hoverColor="#0891b2" />
+        </InputContainer>
+      </Contents>
+    </Container>
   );
 };
 
