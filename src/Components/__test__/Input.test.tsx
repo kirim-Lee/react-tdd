@@ -1,5 +1,4 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import 'jest-styled-components';
 
 import { Input } from '../';
 
