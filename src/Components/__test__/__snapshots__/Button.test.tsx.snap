@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> 정확하게 렌더링 되는지 테스트 1`] = `
+.c0 {
+  text-align: center;
+  font-weight: bold;
+  background-color: #304ffe;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 0;
+}
+
+.c0:hover {
+  background-color: #1e40ff;
+}
+
+.c0:active {
+  box-shadow: insect 5px 5px 10px rgba(0,0,0,0.1);
+}
+
+.c1 {
+  color: #fff;
+  font-size: 16px;
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      Button Test
+    </div>
+  </button>
+</div>
+`;
