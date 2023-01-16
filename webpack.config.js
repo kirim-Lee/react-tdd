@@ -1,6 +1,8 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
 const path = require('path');
+const webpack = require('webpack');
+const InterpolateHtmlPlugin = require('interpolate-html-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -22,10 +24,20 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html',
+      templateParameters: { PUBLIC_SRC: path.resolve(__dirname, 'public') },
+    }),
+    new InterpolateHtmlPlugin({
+      PUBLIC_URL: path.resolve(__dirname, 'public'),
     }),
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+    new webpack.EnvironmentPlugin({
+      PUBLIC_SRC: path.resolve(__dirname, 'public'),
+    }),
+    // new webpack.DefinePlugin({
+    //   'process.env.PUBLIC_SRC': path.resolve(__dirname, 'public'),
+    // }),
   ],
   module: {
     rules: [
