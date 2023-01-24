@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 interface IContext {
   readonly todoList: string[];
@@ -16,16 +16,32 @@ interface IProps {
   children: JSX.Element | JSX.Element[];
 }
 
+const TODO_LIST = 'TodoList';
+
 const TodoListProvider = ({ children }: IProps): JSX.Element => {
   const [todoList, setTodoList] = useState<string[]>([]);
 
-  const addTodo = (toDo: string) => setTodoList([...todoList, toDo]);
+  const addTodo = (toDo: string) => {
+    if (!toDo) return;
+
+    const newList = [...todoList, toDo];
+    localStorage.setItem(TODO_LIST, JSON.stringify(newList));
+    setTodoList(newList);
+  };
 
   const deleteTodo = (index: number) => {
     let list = [...todoList];
     list.splice(index, 1);
+    localStorage.setitem(TODO_LIST, JSON.stringify(list));
     setTodoList(list);
   };
+
+  useEffect(() => {
+    const list = localStorage.getItem(TODO_LIST);
+    if (list) {
+      setTodoList(JSON.parse(list));
+    }
+  }, []);
 
   return (
     <TodoListContext.Provider value={{ todoList, addTodo, deleteTodo }}>
