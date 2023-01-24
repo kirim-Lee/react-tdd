@@ -3,7 +3,7 @@
 exports[`<Input /> 렌더링이 잘 되는지 테스트 1`] = `
 <div>
   <input
-    class="sc-ftTHYK cvWhho"
+    class="sc-gKPRtg dqyRml"
     value="default value"
   />
 </div>

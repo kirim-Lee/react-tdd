@@ -4,18 +4,6 @@ export const Container = styled.div`
   text-align: center;
 `;
 
-export const InputContainer = styled.div`
-  display: flex;
-`;
-
-export const TodoListContainer = styled.div`
-  min-width: 350px;
-  height: 400px;
-  overflow-y: scroll;
-  border: 1px solid #bdbdbd;
-  margin-bottom: 20px;
-`;
-
 export const Contents = styled.div`
   display: flex;
   background-color: #fff;
@@ -57,3 +45,5 @@ export const AppLogo = styled.img`
 export * from './Button';
 export * from './Input';
 export * from './TodoItem';
+export * from './InputContainer';
+export * from './TodoList';
