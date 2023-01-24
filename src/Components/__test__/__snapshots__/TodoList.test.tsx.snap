@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoList /> 렌더링 테스트 1`] = `
+<div>
+  <div
+    class="sc-eDvSVe wpcBq"
+    data-testid="toDoList"
+  />
+</div>
+`;

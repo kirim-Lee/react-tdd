@@ -32,7 +32,7 @@ const TodoListProvider = ({ children }: IProps): JSX.Element => {
   const deleteTodo = (index: number) => {
     let list = [...todoList];
     list.splice(index, 1);
-    localStorage.setitem(TODO_LIST, JSON.stringify(list));
+    localStorage.setItem(TODO_LIST, JSON.stringify(list));
     setTodoList(list);
   };
 

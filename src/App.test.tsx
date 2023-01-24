@@ -46,4 +46,18 @@ describe('<App />', () => {
     expect(todoItem).not.toBeInTheDocument();
     expect(toDoList.childElementCount).toBe(1);
   });
+
+  it('로컬스토리지 데이터 투두리스트와 연동 확인', () => {
+    localStorage.setItem(
+      'TodoList',
+      JSON.stringify(['todo 1', 'todo 2', 'todo 3'])
+    );
+
+    render(<App />);
+
+    expect(screen.getByText('todo 1')).toBeInTheDocument();
+    expect(screen.getByText('todo 2')).toBeInTheDocument();
+    expect(screen.getByText('todo 3')).toBeInTheDocument();
+    expect(screen.getAllByText('삭제').length).toBe(3);
+  });
 });
