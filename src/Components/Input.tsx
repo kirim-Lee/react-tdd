@@ -8,6 +8,7 @@ const InputBox = styled.input`
   border-radius: 8px;
   border: 1px solid #bdbdbd;
   outline: none;
+  margin-right: 3px;
 `;
 
 interface IProps {

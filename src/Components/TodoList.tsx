@@ -8,7 +8,6 @@ const Container = styled.div`
   height: 400px;
   overflow-y: scroll;
   border: 1px solid #bdbdbd;
-  margin-bottom: 20px;
 `;
 
 export const TodoList = () => {
@@ -17,7 +16,12 @@ export const TodoList = () => {
   return (
     <Container data-testid="toDoList">
       {todoList.map((item, index) => (
-        <TodoItem key={item} label={item} onDelete={() => deleteTodo(index)} />
+        <TodoItem
+          key={item}
+          id={index}
+          label={item}
+          onDelete={() => deleteTodo(index)}
+        />
       ))}
     </Container>
   );

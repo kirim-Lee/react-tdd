@@ -17,6 +17,7 @@ const config = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   devServer: {
     open: true,
@@ -25,6 +26,7 @@ const config = {
       directory: publicPath,
       publicPath,
     },
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -63,7 +65,7 @@ const config = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
 };
 

@@ -1,18 +1,43 @@
-import { useState } from 'react';
+import React from 'react';
 import '../public/scss/style.scss';
-import { Container, Contents, InputContainer, TodoList } from './Components';
 import { TodoListProvider } from './Contexts/TodoList';
+import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
+
+import List from './Pages/List';
+import Add from './Pages/Add';
+import Detail from './Pages/Detail';
+import PageHeader from './Components/PageHeader';
+import NotFound from './Pages/NotFound';
+
+const Root = () => {
+  return (
+    <React.Fragment>
+      <PageHeader />
+      <Outlet />
+    </React.Fragment>
+  );
+};
+
+const router = createBrowserRouter([
+  { errorElement: <NotFound /> },
+  {
+    path: '/',
+    element: <Root />,
+    children: [
+      { path: '/', element: <List /> },
+      { path: '/add', element: <Add /> },
+      { path: '/detail/:id', element: <Detail /> },
+    ],
+  },
+]);
 
 const App = () => {
   return (
-    <TodoListProvider>
-      <Container>
-        <Contents>
-          <TodoList />
-          <InputContainer />
-        </Contents>
-      </Container>
-    </TodoListProvider>
+    <React.StrictMode>
+      <TodoListProvider>
+        <RouterProvider router={router} />
+      </TodoListProvider>
+    </React.StrictMode>
   );
 };
 

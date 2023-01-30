@@ -1,7 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  text-align: center;
+  width: 350px;
+  margin: 10px auto;
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Contents = styled.div`

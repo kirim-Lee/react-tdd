@@ -8,13 +8,18 @@ const Container = styled.div`
   display: flex;
 `;
 
-export const InputContainer = () => {
+interface IProps {
+  readonly onAdd?: () => void;
+}
+
+export const InputContainer = ({ onAdd }: IProps) => {
   const { addTodo } = useContext(TodoListContext);
   const [todo, setTodo] = useState<string>('');
 
   const handleAdd = () => {
     addTodo(todo);
     setTodo('');
+    if (todo && onAdd) onAdd();
   };
 
   return (
