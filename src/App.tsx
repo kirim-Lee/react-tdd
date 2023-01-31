@@ -1,7 +1,12 @@
 import React from 'react';
 import '../public/scss/style.scss';
 import { TodoListProvider } from './Contexts/TodoList';
-import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom';
+import {
+  RouterProvider,
+  createBrowserRouter,
+  Outlet,
+  RouteObject,
+} from 'react-router-dom';
 
 import List from './Pages/List';
 import Add from './Pages/Add';
@@ -18,7 +23,7 @@ const Root = () => {
   );
 };
 
-const router = createBrowserRouter([
+export const routes: RouteObject[] = [
   { errorElement: <NotFound /> },
   {
     path: '/',
@@ -29,7 +34,9 @@ const router = createBrowserRouter([
       { path: '/detail/:id', element: <Detail /> },
     ],
   },
-]);
+];
+
+const router = createBrowserRouter(routes);
 
 const App = () => {
   return (

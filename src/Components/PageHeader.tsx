@@ -37,7 +37,7 @@ const PageHeader = () => {
     if (pathname === '/') return '할 일 목록';
     if (pathname === '/add') return '할 일 추가';
     if (pathname.startsWith('/detail')) return '할 일 상세';
-    return '';
+    return '에러';
   }, [pathname]);
 
   return (

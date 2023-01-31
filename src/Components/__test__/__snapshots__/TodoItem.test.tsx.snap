@@ -44,17 +44,21 @@ exports[`<TodoItem /> 렌더링이 잘 되는지 테스트 1`] = `
   font-size: 16px;
   margin-right: 20px;
   text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #333;
 }
 
 <div>
   <div
     class="c0"
   >
-    <div
+    <a
       class="c1"
+      href="/detail/1"
     >
       default value
-    </div>
+    </a>
     <button
       class="c2"
     >

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageHeader /> 렌더 테스트 1`] = `
+<div>
+  <div
+    class="sc-bcXHqe kNccn"
+  >
+    <div
+      class="sc-gswNZR gUIhpX"
+    >
+      할 일 목록
+    </div>
+  </div>
+</div>
+`;

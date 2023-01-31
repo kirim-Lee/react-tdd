@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Page 렌더링 테스트 1`] = `
+<div>
+  <div
+    class="sc-bcXHqe jnXeEi"
+  >
+    <div
+      class="sc-jrcTuL hviBsy"
+      data-testid="toDoList"
+    >
+      <div
+        class="sc-iBYQkv hdVmex"
+      >
+        <a
+          class="sc-ftTHYK deRNsE"
+          href="/detail/0"
+        >
+          Todo 1
+        </a>
+        <button
+          class="sc-eDvSVe gBjEPJ"
+        >
+          <div
+            class="sc-jSUZER jTTUoN"
+          >
+            삭제
+          </div>
+        </button>
+      </div>
+      <div
+        class="sc-iBYQkv hdVmex"
+      >
+        <a
+          class="sc-ftTHYK deRNsE"
+          href="/detail/1"
+        >
+          Todo 2
+        </a>
+        <button
+          class="sc-eDvSVe gBjEPJ"
+        >
+          <div
+            class="sc-jSUZER jTTUoN"
+          >
+            삭제
+          </div>
+        </button>
+      </div>
+      <div
+        class="sc-iBYQkv hdVmex"
+      >
+        <a
+          class="sc-ftTHYK deRNsE"
+          href="/detail/2"
+        >
+          Todo 3
+        </a>
+        <button
+          class="sc-eDvSVe gBjEPJ"
+        >
+          <div
+            class="sc-jSUZER jTTUoN"
+          >
+            삭제
+          </div>
+        </button>
+      </div>
+    </div>
+    <a
+      class="sc-kDvujY kxypwL"
+      href="/add"
+    >
+      +
+    </a>
+  </div>
+</div>
+`;

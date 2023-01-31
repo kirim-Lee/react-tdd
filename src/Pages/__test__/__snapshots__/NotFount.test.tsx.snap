@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Not Found 렌더링 테스트 1`] = `
+<div>
+  <div
+    class="sc-bcXHqe CFXPj"
+  >
+    Not Found 😞
+  </div>
+</div>
+`;

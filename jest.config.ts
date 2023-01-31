@@ -3,8 +3,10 @@ import type { Config } from 'jest';
 const config: Config = {
   verbose: true,
   testEnvironment: 'jest-environment-jsdom',
-
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  setupFilesAfterEnv: [
+    '@testing-library/jest-dom/extend-expect',
+    '<rootDir>/jest-setup.js',
+  ],
   preset: 'ts-jest',
   transform: {
     '^.+\\.tsx?$': [

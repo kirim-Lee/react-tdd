@@ -54,4 +54,25 @@ describe('<InputContainer />', () => {
       JSON.stringify(['study react 1'])
     );
   });
+
+  it('추가 버튼을 눌렀을 때 props으로 전달된 함수 실행하는지 확인', () => {
+    const handleClick = jest.fn();
+    render(<InputContainer onAdd={handleClick} />);
+
+    const input = screen.getByPlaceholderText(
+      '할 일을 입력해 주세요'
+    ) as HTMLInputElement;
+    const button = screen.getByText('추가');
+
+    expect(handleClick).toHaveBeenCalledTimes(0);
+
+    fireEvent.click(button);
+
+    expect(handleClick).toHaveBeenCalledTimes(0);
+
+    fireEvent.change(input, { target: { value: 'study react 1' } });
+    fireEvent.click(button);
+
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
 });

@@ -3,7 +3,7 @@
 exports[`<TodoList /> 렌더링 테스트 1`] = `
 <div>
   <div
-    class="sc-eDvSVe wpcBq"
+    class="sc-eDvSVe dMdoRv"
     data-testid="toDoList"
   />
 </div>

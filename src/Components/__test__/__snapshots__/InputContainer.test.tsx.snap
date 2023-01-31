@@ -6,7 +6,7 @@ exports[`<InputContainer /> 렌더링 테스트 1`] = `
     class="sc-hLBbgP gJsMjZ"
   >
     <input
-      class="sc-bcXHqe dKujtN"
+      class="sc-bcXHqe bexBeW"
       placeholder="할 일을 입력해 주세요"
       value=""
     />

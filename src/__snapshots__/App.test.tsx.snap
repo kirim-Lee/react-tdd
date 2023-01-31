@@ -3,33 +3,106 @@
 exports[`<App /> 렌더링이 잘 되는지 테스트 1`] = `
 <div>
   <div
-    class="sc-bcXHqe iAIzKk"
+    class="sc-csuSiG kyqCVC"
   >
     <div
-      class="sc-gswNZR qvSGk"
+      class="sc-eDWCr yeUAh"
+    >
+      할 일 목록
+    </div>
+  </div>
+  <div
+    class="sc-bcXHqe jnXeEi"
+  >
+    <div
+      class="sc-jrcTuL hviBsy"
+      data-testid="toDoList"
+    />
+    <a
+      class="sc-kDvujY kxypwL"
+      href="/add"
+    >
+      +
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<App /> 상세 페이지로 이동, 다시 되돌아오기 1`] = `
+<div>
+  <div
+    class="sc-csuSiG kyqCVC"
+  >
+    <div
+      class="sc-eDWCr yeUAh"
+    >
+      할 일 상세
+    </div>
+    <a
+      class="sc-bqWxrE emAmiQ"
+      href="/"
+    >
+      돌아가기
+    </a>
+  </div>
+  <div
+    class="sc-bcXHqe jnXeEi"
+  >
+    <div
+      class="sc-ipEyDJ jmpmJh"
+    >
+      ToDo 1
+    </div>
+    <button
+      class="sc-eDvSVe kbfjFZ"
     >
       <div
-        class="sc-jrcTuL inrruT"
-        data-testid="toDoList"
-      />
-      <div
-        class="sc-pyfCe eKYSuT"
+        class="sc-jSUZER jTTUoN"
       >
-        <input
-          class="sc-gKPRtg dqyRml"
-          placeholder="할 일을 입력해 주세요"
-          value=""
-        />
-        <button
-          class="sc-eDvSVe cNqITy"
-        >
-          <div
-            class="sc-jSUZER jTTUoN"
-          >
-            추가
-          </div>
-        </button>
+        삭제
       </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<App /> 추가 페이지 이동, 돌아오기 확인 1`] = `
+<div>
+  <div
+    class="sc-csuSiG kyqCVC"
+  >
+    <div
+      class="sc-eDWCr yeUAh"
+    >
+      할 일 추가
+    </div>
+    <a
+      class="sc-bqWxrE emAmiQ"
+      href="/"
+    >
+      돌아가기
+    </a>
+  </div>
+  <div
+    class="sc-bcXHqe jnXeEi"
+  >
+    <div
+      class="sc-pyfCe eKYSuT"
+    >
+      <input
+        class="sc-gKPRtg dQhuIG"
+        placeholder="할 일을 입력해 주세요"
+        value=""
+      />
+      <button
+        class="sc-eDvSVe cNqITy"
+      >
+        <div
+          class="sc-jSUZER jTTUoN"
+        >
+          추가
+        </div>
+      </button>
     </div>
   </div>
 </div>

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Detail page 렌더링 테스트 1`] = `
+<div>
+  <div
+    class="sc-bcXHqe jnXeEi"
+  >
+    <div
+      class="sc-kDvujY kvPBTJ"
+    >
+      Todo 2
+    </div>
+    <button
+      class="sc-eDvSVe kbfjFZ"
+    >
+      <div
+        class="sc-jSUZER jTTUoN"
+      >
+        삭제
+      </div>
+    </button>
+  </div>
+</div>
+`;

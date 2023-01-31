@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Page 렌더링 테스트 1`] = `
+<div>
+  <div
+    class="sc-bcXHqe jnXeEi"
+  >
+    <div
+      class="sc-pyfCe eKYSuT"
+    >
+      <input
+        class="sc-gKPRtg dQhuIG"
+        placeholder="할 일을 입력해 주세요"
+        value=""
+      />
+      <button
+        class="sc-eDvSVe cNqITy"
+      >
+        <div
+          class="sc-jSUZER jTTUoN"
+        >
+          추가
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
